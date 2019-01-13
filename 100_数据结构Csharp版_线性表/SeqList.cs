@@ -17,6 +17,7 @@ namespace _100_数据结构Csharp版_线性表
         private int maxsize;           //最大容量
         private int length = 0;          //数组元素的数量
 
+        //封装字段
         public int Maxsize
         {
             get
@@ -36,6 +37,7 @@ namespace _100_数据结构Csharp版_线性表
             }
         }
 
+        //构造函数
         public SeqList(int size)
         {
             maxsize = size;

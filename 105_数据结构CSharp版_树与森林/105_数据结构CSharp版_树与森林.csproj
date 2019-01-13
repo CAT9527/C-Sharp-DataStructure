@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30C7CDFD-A972-4936-A5DC-BE1AD442EDAF}</ProjectGuid>
+    <ProjectGuid>{4C1209EA-0463-416F-9B2F-94F739828261}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_100_数据结构Csharp版_线性表</RootNamespace>
-    <AssemblyName>100_数据结构Csharp版_线性表</AssemblyName>
+    <RootNamespace>_105_数据结构CSharp版_树与森林</RootNamespace>
+    <AssemblyName>105_数据结构CSharp版_树与森林</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -58,15 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CLinkList.cs" />
-    <Compile Include="DbNode.cs" />
-    <Compile Include="DLinkList.cs" />
-    <Compile Include="IlinarList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeqList.cs" />
-    <Compile Include="SLinkList.cs" />
-    <Compile Include="SNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

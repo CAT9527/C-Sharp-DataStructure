@@ -56,7 +56,7 @@ namespace _100_数据结构Csharp版_线性表
             data = default(T);
             this.next = next;
         }
-        public SNode(T data,SNode<T> next)
+        public SNode(T data, SNode<T> next)
         {
             this.data = data;
             this.next = next;

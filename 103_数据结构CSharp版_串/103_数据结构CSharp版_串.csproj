@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99B15374-E2E5-4A82-867F-3D1427B9A919}</ProjectGuid>
+    <ProjectGuid>{92C9CB04-FF40-410B-A763-CDF4A5E3124D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>linear_list_线性表_</RootNamespace>
-    <AssemblyName>linear list%28线性表%29</AssemblyName>
+    <RootNamespace>_103_数据结构CSharp版_串</RootNamespace>
+    <AssemblyName>_103_数据结构CSharp版_串</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILinearList.cs" />
+    <Compile Include="IString.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="SeqList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeqListApp.cs" />
-    <Compile Include="SLinkList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
