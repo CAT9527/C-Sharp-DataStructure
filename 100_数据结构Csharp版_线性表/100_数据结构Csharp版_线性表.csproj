@@ -60,7 +60,7 @@
   <ItemGroup>
     <Compile Include="CLinkList.cs" />
     <Compile Include="DbNode.cs" />
-    <Compile Include="DLinkList.cs" />
+    <Compile Include="DbLinkList.cs" />
     <Compile Include="IlinarList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

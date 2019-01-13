@@ -10,11 +10,11 @@ namespace _100_数据结构Csharp版_线性表
     /// 双向链表的基本操作实现类
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    class DLinkList<T> : IlinarList<T>
+    class DbLinkList<T> : IlinarList<T>
     {
         private DbNode<T> start;   //双向链表的头引用
         private int length;                 //双向链表的长度
-        public DLinkList()
+        public DbLinkList()
         {
             start = null;
         }
@@ -184,12 +184,12 @@ namespace _100_数据结构Csharp版_线性表
         /// </summary>
         /// <param name="value">需要查找的值</param>
         /// <returns>返回值所在的索引</returns>
-        public int SearchNode(T value)
+        public T SearchNode(T value)
         {
             if (IsEmpty())
             {
                 Console.WriteLine("表为空");
-                return -1;
+                return default(T);
             }
             DbNode<T> current = start;
             int i = 0;
@@ -199,9 +199,9 @@ namespace _100_数据结构Csharp版_线性表
                 i++;
             }
             if (current != null)
-                return i;
+                return current.Data;
             else
-                return -1;
+                return default(T);
 
         }
     }

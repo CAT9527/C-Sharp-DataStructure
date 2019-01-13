@@ -8,7 +8,7 @@ namespace _100_数据结构Csharp版_线性表
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             //使用自己的顺序表
             SeqList<string> seqList = new SeqList<string>(10);

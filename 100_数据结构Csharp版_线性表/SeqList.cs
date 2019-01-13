@@ -145,12 +145,12 @@ namespace _100_数据结构Csharp版_线性表
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public int SearchNode(T value)
+        public T SearchNode(T value)
         {
             if (IsEmpty())
             {
                 Console.WriteLine("表为空");
-                return -1;
+                return default(T);
             }
             int i = 0;
             for(i = 0; i < length; i++)
@@ -162,9 +162,9 @@ namespace _100_数据结构Csharp版_线性表
             }
             if (i >= length)
             {
-                return -1;
+                return default(T);
             }
-            return i;
+            return data[i];
             
         }
 

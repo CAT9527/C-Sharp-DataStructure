@@ -190,25 +190,25 @@ namespace _100_数据结构Csharp版_线性表
         /// </summary>
         /// <param name="value">要查找的值</param>
         /// <returns>索引位置</returns>
-        public int SearchNode(T value)
+        public T SearchNode(T value)
         {
             if (IsEmpty())
             {
                 Console.WriteLine("List is empty");
-                return -1;
+                return default(T);
             }
 
-            SNode<T> curent = start;
+            SNode<T> current = start;
             int i = 0;
-            while (!curent.Data.ToString().Contains(value.ToString()) && curent != null)
+            while (!current.Data.ToString().Contains(value.ToString()) && current != null)
             {
-                curent = curent.Next;
+                current = current.Next;
                 i++;
             }
-            if (curent != null)
-                return i;
+            if (current != null)
+                return current.Data;
             else
-                return -1;
+                return default(T);
         }
     }
 }

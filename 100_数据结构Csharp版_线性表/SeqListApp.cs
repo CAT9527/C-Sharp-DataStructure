@@ -31,7 +31,7 @@ namespace _100_数据结构Csharp版_线性表
             set { stu_score = value; }
         }
 
-        public StuNode(string stu_no,string stu_name,int stu_score)
+        public StuNode(string stu_no, string stu_name, int stu_score)
         {
             this.stu_no = stu_no;
             this.stu_name = stu_name;
@@ -58,7 +58,18 @@ namespace _100_数据结构Csharp版_线性表
                     int maxsize = Convert.ToInt32(Console.ReadLine());
                     stuList = new SeqList<StuNode>(maxsize);
                     break;
-
+                /*初始化单链表*/
+                case '2':
+                    stuList = new SLinkList<StuNode>();
+                    break;
+                /*初始化双向链表*/
+                case '3':
+                    stuList = new DbLinkList<StuNode>();
+                    break;
+                /*初始化循环链表*/
+                case '4':
+                    stuList = new CLinkList<StuNode>();
+                    break;
             }
 
             while (true)
@@ -72,138 +83,137 @@ namespace _100_数据结构Csharp版_线性表
                 Console.WriteLine("6.按降序显示所有学生成绩");
                 Console.WriteLine("7.退出");
                 seleflag = Convert.ToChar(Console.ReadLine());
-            }
 
-            switch (seleflag)
-            {
-                /*添加学生成绩*/
-                case '1':
-                    {
-                        char flag;
-                        do
+                switch (seleflag)
+                {
+                    /*添加学生成绩*/
+                    case '1':
                         {
-                            string stu_no;
-                            string stu_name;
-                            int stu_score;
-                            Console.Write("请输入学号");
-                            stu_no = Console.ReadLine();
-                            Console.WriteLine("请输入姓名");
-                            stu_name = Console.ReadLine();
-                            Console.WriteLine("请输入学生成绩");
-                            stu_score = Convert.ToInt32(Console.ReadLine());
+                            char flag;
+                            do
+                            {
+                                string stu_no;
+                                string stu_name;
+                                int stu_score;
+                                Console.Write("请输入学号");
+                                stu_no = Console.ReadLine();
+                                Console.WriteLine("请输入姓名");
+                                stu_name = Console.ReadLine();
+                                Console.WriteLine("请输入学生成绩");
+                                stu_score = Convert.ToInt32(Console.ReadLine());
 
-                            //创建新结点，结点类型为StuNode
-                            StuNode newNode = new StuNode(stu_no, stu_name, stu_score);
-                           
-                            if (stuList.GetLength() == 0)                         
-                            {
-                                //如果顺序表为空，直接把新结点放在第一位
-                                stuList.InsertNode(newNode, 1);
-                            }
-                            else if (newNode.Stu_score > stuList.SearchNode(stuList.GetLength()).Stu_score)   
-                            {
-                                //如果新结点成绩大于列表最后一个结点的成绩，则把新结点放在最后一个结点之后
-                                stuList.InsertNode(newNode, stuList.GetLength() + 1);
-                            }
-                            else
-                            {
-                                //如果前两种情况都不是，那么遍历顺序表结点，当新结点成绩小于当前结点，则将新结点放在当前结点位置
-                                for (int i = 1; i <= stuList.GetLength(); i++)
+                                //创建新结点，结点类型为StuNode
+                                StuNode newNode = new StuNode(stu_no, stu_name, stu_score);
+
+                                if (stuList.GetLength() == 0)
                                 {
-                                    if (newNode.Stu_score <= (stuList.SearchNode(i).Stu_score))
+                                    //如果顺序表为空，直接把新结点放在第一位
+                                    stuList.InsertNode(newNode, 1);
+                                }
+                                else if (newNode.Stu_score > (stuList.SearchNode(stuList.GetLength()).Stu_score))
+                                {
+                                    //如果新结点成绩大于列表最后一个结点的成绩，则把新结点放在最后一个结点之后
+                                    stuList.InsertNode(newNode, stuList.GetLength() + 1);
+                                }
+                                else
+                                {
+                                    //如果前两种情况都不是，那么遍历顺序表结点，当新结点成绩小于当前结点，则将新结点放在当前结点位置
+                                    for (int i = 1; i <= stuList.GetLength(); i++)
                                     {
-                                        stuList.InsertNode(newNode, i);
-                                        break;
+                                        if (newNode.Stu_score <= (stuList.SearchNode(i).Stu_score))
+                                        {
+                                            stuList.InsertNode(newNode, i);
+                                            break;
+                                        }
                                     }
                                 }
-                            }
-                            Console.Write("还有学生的成绩需要输入吗？（Y/N）");
-                            flag = Convert.ToChar(Console.ReadLine());
-                        } while (flag == 'Y');
-                        break;
-                    }
-
-                /*按学号删除学生成绩*/
-                case '2':
-                    {
-                        StuNode temp;
-                        Console.Write("请输入要删除的学生的学号：");
-                        string stu_no = Console.ReadLine();
-                        for(int i = 1; i < stuList.GetLength(); i++)
+                                Console.Write("还有学生的成绩需要输入吗？（Y/N）");
+                                flag = Convert.ToChar(Console.ReadLine());
+                            } while (flag == 'Y');
+                            break;
+                        }
+                    /*按学号删除学生成绩*/
+                    case '2':
                         {
-                            temp = stuList.SearchNode(i);
-                            if (temp.Stu_no == stu_no)
+                            StuNode temp;
+                            Console.Write("请输入要删除的学生的学号：");
+                            string stu_no = Console.ReadLine();
+                            for (int i = 1; i < stuList.GetLength(); i++)
                             {
-                                stuList.DeleteNode(i);
-                                break;
+                                temp = stuList.SearchNode(i);
+                                if (temp.Stu_no == stu_no)
+                                {
+                                    stuList.DeleteNode(i);
+                                    break;
+                                }
                             }
+                            break;
                         }
-                        break;
-                    }
-                /*按姓名查询学生成绩*/
-                case '3':
-                    {
-                        StuNode temp;
-                        Console.Write("请输入要查询的学生的姓名：");
-                        string stu_name = Console.ReadLine();
-                        for(int i = 1; i < stuList.GetLength(); i++)
+                    /*按姓名查询学生成绩1 SearchNode(int i)*/
+                    case '3':
                         {
-                            temp = stuList.SearchNode(i);
-                            if (temp.Stu_name == stu_name)
+                            StuNode temp;
+                            Console.Write("请输入要查询的学生的姓名：");
+                            string stu_name = Console.ReadLine();
+                            for (int i = 1; i < stuList.GetLength(); i++)
                             {
-                                Console.WriteLine("姓名为{0}的学生成绩是{1}",stu_name,temp.Stu_score);
-                                break;
+                                temp = stuList.SearchNode(i);
+                                if (temp.Stu_name == stu_name)
+                                {
+                                    Console.WriteLine("姓名为{0}的学生成绩是{1}", stu_name, temp.Stu_score);
+                                    break;
+                                }
                             }
+                            break;
                         }
-                        break;
-                    }
-                /*按学号查询学生成绩*/
-                case '4':
-                    {
-                        StuNode temp;
-                        Console.Write("请输入要查询的学生的学号：");
-                        string stu_no = Console.ReadLine();
-                        for(int i = 1; i < stuList.GetLength(); i++)
+                    /*按学号查询学生成绩*/
+                    case '4':
                         {
-                            temp = stuList.SearchNode(i);
-                            if(temp.Stu_no == stu_no)
+                            StuNode temp;
+                            Console.Write("请输入要查询的学生的学号：");
+                            string stu_no = Console.ReadLine();
+                            for (int i = 1; i < stuList.GetLength(); i++)
                             {
-                                Console.WriteLine("学号为{0}的学生成绩是{1}", stu_no, temp.Stu_score);
-                                break;
+                                temp = stuList.SearchNode(i);
+                                if (temp.Stu_no == stu_no)
+                                {
+                                    Console.WriteLine("学号为{0}的学生成绩是{1}", stu_no, temp.Stu_score);
+                                    break;
+                                }
                             }
+                            break;
                         }
-                        break;
-                    }
-                /*按升序显示所有学生成绩，本来就是升序排列*/
-                case '5':
-                    {
-                        StuNode temp = null;
-                        for(int i = 1; i < stuList.GetLength(); i++)
+                    /*按升序显示所有学生成绩，本来就是升序排列*/
+                    case '5':
                         {
-                            temp = stuList.SearchNode(i);
-                            Console.WriteLine("t{0}\t{1}\t{2}",temp.Stu_no,temp.Stu_name,temp.Stu_score);
+                            StuNode temp = null;
+                            for (int i = 1; i < stuList.GetLength(); i++)
+                            {
+                                temp = stuList.SearchNode(i);
+                                Console.WriteLine("t{0}\t{1}\t{2}", temp.Stu_no, temp.Stu_name, temp.Stu_score);
+                            }
+                            break;
                         }
-                        break;
-                    }
-                /*按降序显示所有学生成绩*/
-                case '6':
-                    {
-                        StuNode temp = null;
-                        for (int i = stuList.GetLength(); i >0; i--)
+                    /*按降序显示所有学生成绩*/
+                    case '6':
                         {
-                            temp = stuList.SearchNode(i);
-                            Console.WriteLine("t{0}\t{1}\t{2}", temp.Stu_no, temp.Stu_name, temp.Stu_score);
+                            StuNode temp = null;
+                            for (int i = stuList.GetLength(); i > 0; i--)
+                            {
+                                temp = stuList.SearchNode(i);
+                                Console.WriteLine("t{0}\t{1}\t{2}", temp.Stu_no, temp.Stu_name, temp.Stu_score);
+                            }
+                            break;
                         }
-                        break;
-                    }
-                /*退出程序*/
-                case '7':
-                    {
-                        return;
-                    }
+                    /*退出程序*/
+                    case '7':
+                        {
+                            return;
+                        }
+                }
+                Console.Write("按任意键继续....");
+                Console.ReadLine();
             }
-            Console.Write("按任意键继续....");
-            Console.ReadLine();
         }
     }
 }
