@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace _100_数据结构Csharp版_线性表
 {
+    /// <summary>
+    /// 单链表的实现类
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     class SLinkList<T> : IlinarList<T>
     {
         private SNode<T> start;                  //单链表的头引用

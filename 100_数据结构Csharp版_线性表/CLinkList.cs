@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace _100_数据结构Csharp版_线性表
 {
+    /// <summary>
+    /// 循环链表的实现类
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     class CLinkList<T> : IlinarList<T>
     {
         public void Clear()
