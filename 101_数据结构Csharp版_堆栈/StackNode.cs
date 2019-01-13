@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _101_数据结构Csharp版_堆栈
 {
+
     class StackNode<T>
     {
         private T data;   //数据域
