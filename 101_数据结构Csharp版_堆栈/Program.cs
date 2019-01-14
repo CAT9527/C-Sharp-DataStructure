@@ -8,7 +8,7 @@ namespace _101_数据结构Csharp版_堆栈
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             SeqStack<int> seqStack = new SeqStack<int>(5);
             seqStack.Push(2331);

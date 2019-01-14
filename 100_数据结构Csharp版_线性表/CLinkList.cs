@@ -33,7 +33,7 @@ namespace _100_数据结构Csharp版_线性表
             }
             SNode<T> current = start;
 
-            if(i == 1)
+            if (i == 1)
             {
                 start = current.Next;
                 length--;
