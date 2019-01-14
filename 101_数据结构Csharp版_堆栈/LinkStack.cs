@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _101_数据结构Csharp版_堆栈
 {
@@ -11,37 +7,31 @@ namespace _101_数据结构Csharp版_堆栈
         //初始化
         private StackNode<T> top;          //栈顶指示器
         private int size;                             //栈中元素个数
-
         public StackNode<T> Top
         {
             get { return top; }
             set { top = value; }
         }
-
         public int Size
         {
             get { return size; }
             set { size = value; }
         }
-
         //初始化链栈
         public LinkStack()
         {
             top = null;
             size = 0;
         }
-
         public void Clear()
         {
             top = null;
             size = 0;
         }
-
         public int GetLength()
         {
             return size;
         }
-
         public T GetTop()
         {
             if (isEmpty())
@@ -51,7 +41,6 @@ namespace _101_数据结构Csharp版_堆栈
             }
             return top.Data;
         }
-
         public bool isEmpty()
         {
             if (top == null && size == 0)
@@ -63,7 +52,6 @@ namespace _101_数据结构Csharp版_堆栈
                 return false;
             }
         }
-
         public T Pop()
         {
             if (isEmpty())
@@ -76,7 +64,6 @@ namespace _101_数据结构Csharp版_堆栈
             --size;                          //先自减再保存size值
             return current.Data;
         }
-
         /// <summary>
         /// 入栈操作
         /// </summary>
@@ -94,7 +81,6 @@ namespace _101_数据结构Csharp版_堆栈
                 top = newNode;
             }
             ++size;
-
         }
     }
 }

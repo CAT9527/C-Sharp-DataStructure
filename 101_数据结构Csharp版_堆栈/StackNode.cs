@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _101_数据结构Csharp版_堆栈
+﻿namespace _101_数据结构Csharp版_堆栈
 {
 
     class StackNode<T>

@@ -27,7 +27,6 @@ namespace _101_数据结构Csharp版_堆栈
 
             //车厢重排
             for (int i = 0; i < n; i++)
-            {
                 if (p[i] == NowOut)
                 {
                     Console.WriteLine("Move Car {0} from input to output", p[i]);
@@ -46,9 +45,6 @@ namespace _101_数据结构Csharp版_堆栈
                     if (!Hold(p[i], ref minH, ref minS, ref H, k, n))
                         return false;
                 }
-
-            }
-
             return true;
         }
 
@@ -62,14 +58,12 @@ namespace _101_数据结构Csharp版_堆栈
 
             //通过检查所有的栈顶，搜索新的minH和minS
             minH = n + 2;
-            for (int i = 1; i <= k; i++)
-            {
+            for (int i = 1; i <= k; i++)         
                 if (!H[i].isEmpty() && (H[i].GetTop()) < minH)
                 {
                     minH = c;
                     minS = i;
-                }
-            }
+                }       
         }
 
         //在一个缓冲铁轨中放入车厢C
@@ -86,7 +80,6 @@ namespace _101_数据结构Csharp版_堆栈
 
             //扫描缓冲铁轨
             for (int i = 1; i <= k; i++)
-            {
                 if (!H[i].isEmpty())
                 {
                     //铁轨i不空
@@ -116,15 +109,13 @@ namespace _101_数据结构Csharp版_堆栈
                     minH = c;
                     minS = BestTrack;
                 }
-
-            }
             return true;
         }
 
         //调用火车车厢重排算法Railroad()重排车厢
         public static void Main()
         {
-            int[] p = new int[] { 2, 6, 3, 9, 4, 7, 1, 8, 5 };
+            int[] p = new int[] { 5,8,1,7,4,2,9,6,3 };
             int k = 3;
 
             TrainArrangeBySeqStack ta = new TrainArrangeBySeqStack();
