@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HanNuoTaByRecursive.cs" />
     <Compile Include="IStack.cs" />
     <Compile Include="LinkStack.cs" />
     <Compile Include="Program.cs" />

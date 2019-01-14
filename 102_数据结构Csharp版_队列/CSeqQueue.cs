@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace _102_数据结构Csharp版_队列
 {
     /// <summary>
-    /// 使用顺序结构实现队列接口类(循环顺序队列)
+    /// 使用顺序结构实现队列接口类(循环顺序队列)  Circular sequence Queue
     /// </summary>
     class CSeqQueue<T> : IQueue<T>
     {
-        private int maxsize;                  //循环顺序队列的容量
-        private T[] data;                        //数组，用于存储循环队列中的数据元素
+        private int maxsize;                      //循环顺序队列的容量
+        private T[] data;                         //数组，用于存储循环队列中的数据元素
         private int front;                        //指示最近一个已经离开队列的元素所占的位置
         private int rear;                         //指示最近一个进行入队列的元素的位置
 

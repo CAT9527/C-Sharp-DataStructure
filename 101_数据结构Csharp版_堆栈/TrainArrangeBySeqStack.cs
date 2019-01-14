@@ -113,7 +113,7 @@ namespace _101_数据结构Csharp版_堆栈
         }
 
         //调用火车车厢重排算法Railroad()重排车厢
-        public static void Main()
+        public static void Main2()
         {
             int[] p = new int[] { 5,8,1,7,4,2,9,6,3 };
             int k = 3;

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace _102_数据结构Csharp版_队列
 {
-    class Program
+    interface IBankQueue:IQueue<int>
     {
-        static void Main2(string[] args)
-        {
-        }
+        int GetCallnumber();                //获得服务号码
     }
 }
