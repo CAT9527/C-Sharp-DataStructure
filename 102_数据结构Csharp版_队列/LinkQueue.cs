@@ -11,7 +11,6 @@ namespace _102_数据结构Csharp版_队列
         private QueueNode<T> front;              //队列头指示器
         private QueueNode<T> rear;               //队列尾指示器
         private int size;                                     //队列节点个数
-
         public QueueNode<T> Front
         {
             get { return front; }
@@ -27,20 +26,17 @@ namespace _102_数据结构Csharp版_队列
             get { return size; }
             set { size = value; }
         }
-
         //初始化链队列
         public LinkQueue()
         {
             front = rear = null;
             size = 0;
         }
-
         public void Clear()
         {
             front = rear = null;
             size = 0;
         }
-
         /// <summary>
         /// 出队操作
         /// </summary>
@@ -61,7 +57,6 @@ namespace _102_数据结构Csharp版_队列
             --size;
             return p.Data;
         }
-
         /// <summary>
         /// 入队操作
         /// </summary>
@@ -81,7 +76,6 @@ namespace _102_数据结构Csharp版_队列
             }
             ++size;
         }
-
         public T GetFront()
         {
             if (IsEmpty())
@@ -91,7 +85,6 @@ namespace _102_数据结构Csharp版_队列
             }
             return front.Data;
         }
-
         public int GetLength()
         {
             return size;
@@ -108,7 +101,6 @@ namespace _102_数据结构Csharp版_队列
                 return false;
             }
         }
-
         //链队列没有满的情况
         public bool IsFull()
         {
