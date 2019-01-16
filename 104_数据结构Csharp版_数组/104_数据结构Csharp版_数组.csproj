@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{92C9CB04-FF40-410B-A763-CDF4A5E3124D}</ProjectGuid>
+    <ProjectGuid>{7059F4D5-DF15-4EE4-8D80-1102549AFD98}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_103_数据结构CSharp版_串</RootNamespace>
-    <AssemblyName>_103_数据结构CSharp版_串</AssemblyName>
+    <RootNamespace>_104_数据结构Csharp版_数组</RootNamespace>
+    <AssemblyName>104_数据结构Csharp版_数组</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IString.cs" />
-    <Compile Include="OneToHunderQ.cs" />
+    <Compile Include="GuessNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeqString.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _106_数据结构CSharp版_树与森林
+namespace _104_数据结构Csharp版_数组
 {
     class Program
     {
         static void Main(string[] args)
         {
-
         }
     }
 }

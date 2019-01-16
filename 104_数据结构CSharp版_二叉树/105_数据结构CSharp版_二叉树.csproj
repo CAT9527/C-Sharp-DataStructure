@@ -43,10 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSeqQueue.cs" />
     <Compile Include="HNode.cs" />
     <Compile Include="HuffmanTree.cs" />
-    <Compile Include="IQueue.cs" />
     <Compile Include="LinkBiTree.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />

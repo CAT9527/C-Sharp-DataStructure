@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _104_数据结构CSharp版_二叉树
+namespace _105_数据结构CSharp版_二叉树
 {
     /// <summary>
     /// 不带头节点的二叉树的二叉树链表类

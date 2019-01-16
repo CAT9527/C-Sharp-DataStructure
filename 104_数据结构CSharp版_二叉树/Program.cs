@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _104_数据结构CSharp版_二叉树
+namespace _105_数据结构CSharp版_二叉树
 {
     class Program
     {
