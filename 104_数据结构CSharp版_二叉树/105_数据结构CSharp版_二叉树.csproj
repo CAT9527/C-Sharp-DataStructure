@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="HNode.cs" />
     <Compile Include="HuffmanTree.cs" />
+    <Compile Include="LinkBiSearchTree.cs" />
     <Compile Include="LinkBiTree.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
